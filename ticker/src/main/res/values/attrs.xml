@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CircularView">
+        <!--Radius of Outer Circle in dp-->
+        <attr name="m_circle_radius" format="integer"/>
+
+        <!--Stroke for Outer Circle in dp-->
+        <attr name="m_cicle_stroke_width" format="integer"/>
+
+        <!--Color of Stroke of Outer Circle-->
+        <attr name="m_circle_stroke_color" format="color"/>
+
+        <!--Color of rotating Arc-->
+        <attr name="m_arc_stroke_color" format="color"/>
+
+        <!--Arc margin from Circle in dp-->
+        <attr name="m_arc_margin" format="integer"/>
+
+
+    </declare-styleable>
+
+</resources>

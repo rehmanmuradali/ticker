@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ticker.views.com.ticker.widgets.circular.timer.view.CircularView
+        android:id="@+id/circular_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:m_circle_radius="25"
+        app:m_cicle_stroke_width="14"
+        app:m_arc_stroke_color="@android:color/white"
+        app:m_circle_stroke_color="@color/colorPrimary"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+    <ticker.views.com.ticker.widgets.circular.timer.view.CircularView
+        android:id="@+id/circular_view_with_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:m_circle_radius="70"
+        app:m_cicle_stroke_width="20"
+        app:m_arc_stroke_color="@color/colorPrimary"
+        app:m_circle_stroke_color="@color/colorAccent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/circular_view"
+        />
+
+    <ticker.views.com.ticker.widgets.circular.timer.view.CircularView
+        android:id="@+id/circular_view_with_custom_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:m_circle_radius="70"
+        app:m_cicle_stroke_width="20"
+        app:m_arc_stroke_color="@android:color/white"
+        android:textColor="@color/colorPrimary"
+        app:m_circle_stroke_color="@android:color/holo_blue_light"
+        app:layout_constraintTop_toBottomOf="@+id/circular_view_with_timer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+
+    <Button
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start"
+        app:layout_constraintBottom_toTopOf="@+id/stop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <Button
+        android:id="@+id/stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/stop"
+        app:layout_constraintBottom_toTopOf="@+id/pause"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <Button
+        android:id="@+id/pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pause"
+        app:layout_constraintBottom_toTopOf="@+id/resume"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+    <Button
+        android:id="@+id/resume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/resume"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>
