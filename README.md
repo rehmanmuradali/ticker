@@ -3,7 +3,7 @@ Ticker is an Android Library which can be used for different countdown Timers, a
 
 ## Demo
 
-
+![Demo](https://media.giphy.com/media/51Y11x6QjsTgrF4cds/giphy.gif)
 
 ## Setup
 1. Add it in your root build.gradle at the end of repositories:
