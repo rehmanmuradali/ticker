@@ -65,23 +65,14 @@ Default styling using xml:
 
 ### Loader without text
 ```
-// pause circular view and timer
 CircularView  = (CircularView) rootView.findViewById(R.id.circular_view);
-circularView.startTimer()
 
-if(circularView.pauseTimer())
-{
-// resume circular view and timer
-    //Timer Paused
-} circularView.resumeTimer();
-// stop circular view and timer
 
-CircularView.OptionsBu  circularView.stopTimer();
-ilder builderWithoutText =
-                    new CircularView.OptionsBuilder()
-                            .shouldDisplayText(false)
-                            .setCounterInSeconds(CircularView.OptionsBuilder.INFINITE);
-                
+CircularView.OptionsBuilder builderWithoutText = 
+		new CircularView.OptionsBuilder()
+                	.shouldDisplayText(false)
+                	.setCounterInSeconds(CircularView.OptionsBuilder.INFINITE);
+                        
                 
  circularViewWithoutText.setOptions(builderWithoutText);
 
