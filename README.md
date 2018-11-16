@@ -1,3 +1,5 @@
+[![Android Arsenal]( https://img.shields.io/badge/Android%20Arsenal-Ticker-green.svg?style=flat )]( https://android-arsenal.com/details/1/7322 )
+
 # Ticker
 Ticker is an Android Library which can be used for different countdown Timers, and Loaders. 
 
