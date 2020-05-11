@@ -215,18 +215,17 @@ public class CircularView extends AppCompatTextView {
 
     private void setTextOfTextViewWithSeconds(long value) {
         String numberString;
-        String unit;
-
+       
         if (value / 60 > 0) {
             numberString = String.valueOf((value / 60) + 1);
-            unit = "\nminutes";
+           
         } else {
             numberString = String.valueOf(value);
-            unit = "\nseconds";
+         
         }
 
         //To resize the text size according to length
-        SpannableString spannableString = new SpannableString(numberString + unit);
+        SpannableString spannableString = new SpannableString(numberString);
         spannableString.setSpan(new RelativeSizeSpan(getTextProportion(numberString)), 0, numberString.length(), 0);
 
         if (shouldDisplayTimer) {
