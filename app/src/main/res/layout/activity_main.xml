@@ -16,6 +16,7 @@
         app:m_arc_stroke_color="@android:color/white"
         app:m_circle_stroke_color="@color/colorPrimary"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         />
 
 

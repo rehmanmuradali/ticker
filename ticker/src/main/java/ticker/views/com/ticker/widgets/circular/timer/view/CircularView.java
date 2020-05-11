@@ -76,6 +76,7 @@ public class CircularView extends AppCompatTextView {
 
     // Show Text or not
     private boolean shouldDisplayTimer = true;
+    private boolean shouldDisplayTimeUnit = true;
 
     //Timer Callback
     private CircularViewCallback circularViewCallback;
@@ -225,9 +226,14 @@ public class CircularView extends AppCompatTextView {
             unit = "\nseconds";
         }
 
+        int highlightedTextLength = numberString.length();
+        if (shouldDisplayTimeUnit) {
+            numberString += unit;
+        }
+
         //To resize the text size according to length
-        SpannableString spannableString = new SpannableString(numberString + unit);
-        spannableString.setSpan(new RelativeSizeSpan(getTextProportion(numberString)), 0, numberString.length(), 0);
+        SpannableString spannableString = new SpannableString(numberString);
+        spannableString.setSpan(new RelativeSizeSpan(getTextProportion(numberString)), 0, highlightedTextLength, 0);
 
         if (shouldDisplayTimer) {
 
@@ -399,6 +405,7 @@ public class CircularView extends AppCompatTextView {
         this.circularViewCallback = optionBuilder.circularViewCallback;
         this.shouldDisplayTimer = optionBuilder.shouldDisplayTimer;
         this.customText = optionBuilder.customText;
+        this.shouldDisplayTimeUnit = optionBuilder.shouldDisplayTimeUnit;
         setTextOfTextViewWithSeconds(counterInSeconds);
     }
 
@@ -410,6 +417,7 @@ public class CircularView extends AppCompatTextView {
         private boolean shouldDisplayTimer = true;
         private String customText = null;
         private long counterInSeconds = INFINITE;
+        private boolean shouldDisplayTimeUnit = true;
 
 
         public OptionsBuilder setCircularViewCallback(CircularViewCallback circularViewCallback) {
@@ -433,6 +441,11 @@ public class CircularView extends AppCompatTextView {
 
         public OptionsBuilder setCounterInSeconds(long counterInSeconds) {
             this.counterInSeconds = counterInSeconds;
+            return this;
+        }
+
+        public OptionsBuilder shouldDisplayTimeUnit(boolean shouldDisplayTimeUnit) {
+            this.shouldDisplayTimeUnit = shouldDisplayTimeUnit;
             return this;
         }
 
