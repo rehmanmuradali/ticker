@@ -219,10 +219,10 @@ public class CircularView extends AppCompatTextView {
 
         if (value / 60 > 0) {
             numberString = String.valueOf((value / 60) + 1);
-            unit = "\nminutes";
+          
         } else {
             numberString = String.valueOf(value);
-            unit = "\nseconds";
+          
         }
 
         //To resize the text size according to length
